@@ -27,6 +27,48 @@ dependencies {
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0-alpha01'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha3'
+
+    // dependency injection
+    implementation "com.google.dagger:dagger:$daggerVersion"
+    implementation "com.google.dagger:dagger-android:$daggerVersion"
+    implementation "com.google.dagger:dagger-android-support:$daggerVersion"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0-alpha1'
+    kapt "com.google.dagger:dagger-compiler:$daggerVersion"
+    kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
+
+    // network
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-moshi:$moshiConverterVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$rxJavaAdapterVersion"
+
+    //moshi
+    implementation "com.squareup.moshi:moshi-kotlin:$moshiKotlinVersion"
+    implementation "com.squareup.moshi:moshi-adapters:$moshiKotlinVersion"
+
+    // mapping
+    implementation "com.squareup.moshi:moshi-kotlin:$moshiVersion"
+
+    // architecture components
+    implementation "androidx.lifecycle:lifecycle-extensions:$archCompomentVersion"
+    kapt "androidx.lifecycle:lifecycle-compiler:$archCompomentVersion"
+
+    //RxJava 2 LiveData
+    implementation "androidx.lifecycle:lifecycle-reactivestreams:$archCompomentVersion"
+
+    //RxJava RxAndroid
+    implementation "io.reactivex.rxjava2:rxjava:$rxJava2Version"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
+
+    // room
+    implementation "androidx.room:room-runtime:$roomVersion"
+    implementation "android.arch.persistence.room:rxjava2:$roomVersion"
+    kapt "androidx.room:room-compiler:$roomVersion"
+
+    // logging
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
